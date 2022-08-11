@@ -41,16 +41,16 @@ package main
 
 import (
     "fmt"
-	"log"
-	"net/http"
+    "log"
+    "net/http"
 )
 
 func main() {
-	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "pong")
-	})
+    http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "pong")
+    })
 
-	log.Fatal(http.ListenAndServe(":80", nil))
+    log.Fatal(http.ListenAndServe(":80", nil))
 }
 ```  
 
